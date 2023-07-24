@@ -1,0 +1,7 @@
+.custom-card-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,auto));
+    justify-items: stretch;
+    gap: 3rem;
+        
+}

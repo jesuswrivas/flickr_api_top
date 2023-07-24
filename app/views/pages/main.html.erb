@@ -1,0 +1,50 @@
+<div class="container-fluid">
+
+<div class="row">
+
+    <div class="col text-center">
+         <h1><%= link_to "Flickr API", root_path %></h1>
+
+
+    </div>
+
+    
+</div>
+
+
+<div class="row">
+
+    <div class="col text-center mb-5">
+        <%= form_with url: "/search", method: :get do |form| %>
+            <%= form.label :nsdi, "Search for:" %>
+            <%= form.text_field :nsdi %>
+            <%= form.submit "Search" %>
+        <% end %>
+    </div>
+</div>
+
+
+
+<div class="row">
+
+    <div class="col">
+      
+        <% if @list_of_url %>
+        
+            <div class="custom-card-gallery">
+
+                <% @list_of_url.each do |image|%>
+                    <div class="custom-card-gallery-image">
+                        <%= image_tag image%>
+                    </div>
+                <% end %>
+                
+</div>
+        <% end %>
+    </div>
+
+</div>
+
+
+
+</div>
